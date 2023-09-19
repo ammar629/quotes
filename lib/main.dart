@@ -30,11 +30,9 @@ class _QuoteListState extends State<QuoteList> {
         centerTitle: true,
         backgroundColor: Colors.redAccent,
       ),
-      body: const Column(
-        children: [
-
-
-      ]),
+      body: Column(
+        children: quotes.map((quote) => Text(quote)).toList(), 
+        ),
       backgroundColor: Colors.grey[200],
     );
   }
