@@ -16,10 +16,10 @@ class QuoteList extends StatefulWidget {
 
 class _QuoteListState extends State<QuoteList> {
   // List of Quotes
-  List<String>quotes = [
-    'The strongest among you is the one who controls his anger',
-    'Seek knowledge from cradle to grave',
-    'Allah does not look at your forms and possessions but he looks at your hearts and your deeds',
+  List<Quote>quotes = [
+    Quote(text: 'The strongest among you is the one who controls his anger', author: 'Prophet Muhammad (ﷺ)'),
+    Quote(text: 'Seek knowledge from cradle to grave', author: 'Prophet Muhammad (ﷺ)'),
+    Quote(text: 'Allah does not look at your forms and possessions but he looks at your hearts and your deeds', author:  'Prophet Muhammad (ﷺ)'),
   ];
 
 
@@ -32,7 +32,7 @@ class _QuoteListState extends State<QuoteList> {
         backgroundColor: Colors.redAccent,
       ),
       body: Column(
-        children: quotes.map((quote) => Text(quote)).toList(), 
+        children: quotes.map((quote) => Text('${quote.text} - ${quote.author}')).toList(), 
         ),
       backgroundColor: Colors.grey[200],
     );
