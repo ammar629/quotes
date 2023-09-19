@@ -1,5 +1,41 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp();
+  runApp(const MaterialApp(
+    home: QuoteList(),
+  ));
+}
+
+class QuoteList extends StatefulWidget {
+  const QuoteList({super.key});
+
+  @override
+  State<QuoteList> createState() => _QuoteListState();
+}
+
+class _QuoteListState extends State<QuoteList> {
+  // List of Quotes
+  List<String>quotes = [
+    'The strongest among you is the one who controls his anger',
+    'Seek knowledge from cradle to grave',
+    'Allah does not look at your forms and possessions but he looks at your hearts and your deeds',
+  ];
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Great Quotes'),
+        centerTitle: true,
+        backgroundColor: Colors.redAccent,
+      ),
+      body: const Column(
+        children: [
+
+
+      ]),
+      backgroundColor: Colors.grey[200],
+    );
+  }
 }
