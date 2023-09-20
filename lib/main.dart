@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'quote.dart';
+import 'quote_card.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -23,42 +24,12 @@ class _QuoteListState extends State<QuoteList> {
     Quote(
         text: 'Seek knowledge from cradle to grave',
         author: 'Prophet Muhammad (ﷺ)'),
-    Quote(
+    /*Quote(
         text:
             'Allah does not look at your forms and possessions but he looks at your hearts and your deeds',
-        author: 'Prophet Muhammad (ﷺ)'),
+        author: 'Prophet Muhammad (ﷺ)'),*/
+    Quote(text: 'Example Quote', author: 'Example Author'),
   ];
-
-  Widget quoteTemplate(Quote quote) {
-    return Card(
-      margin: const EdgeInsets.fromLTRB(16, 16, 16, 0),
-      child: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-          Text(
-            quote.text,
-            style: TextStyle(
-              fontSize: 18.0,
-              color: Colors.grey[600],
-            ),
-          ),
-          const SizedBox(
-            height: 6,
-          ),
-          Text(
-            quote.author,
-            style: TextStyle(
-              fontSize: 14,
-              color: Colors.grey[800],
-            ),
-            textAlign: TextAlign.center,
-          )
-        ]),
-      ),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +40,7 @@ class _QuoteListState extends State<QuoteList> {
         backgroundColor: Colors.redAccent,
       ),
       body: Column(
-        children: quotes.map((quote) => quoteTemplate(quote)).toList(),
+        children: quotes.map((quote) => QuoteCard(quote)).toList(),
       ),
       backgroundColor: Colors.grey[200],
     );
