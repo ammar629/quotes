@@ -24,10 +24,11 @@ class _QuoteListState extends State<QuoteList> {
     Quote(
         text: 'Seek knowledge from cradle to grave',
         author: 'Prophet Muhammad (ﷺ)'),
-    Quote(
+    /*Quote(
         text:
             'Allah does not look at your forms and possessions but he looks at your hearts and your deeds',
-        author: 'Prophet Muhammad (ﷺ)'),
+        author: 'Prophet Muhammad (ﷺ)'),*/
+    Quote(text: 'Example Quote', author: 'Example Author'),
   ];
 
   @override
