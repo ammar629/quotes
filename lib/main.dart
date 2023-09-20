@@ -53,6 +53,7 @@ class _QuoteListState extends State<QuoteList> {
               fontSize: 14,
               color: Colors.grey[800],
             ),
+            textAlign: TextAlign.center,
           )
         ]),
       ),
